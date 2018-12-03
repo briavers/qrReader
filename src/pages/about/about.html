@@ -7,5 +7,14 @@
 </ion-header>
 
 <ion-content padding>
+  <ion-item>
+    <ion-input type="text" placeholder="My QR Date" [(ngModel)]="qrData"> </ion-input>
+  </ion-item>
+  <button ion-butten full icon-left (click)="readCode()"><ion-icon name="qr-scanner"> scan code </ion-icon></button>
 
+  <ion-card *ngIf="hasData">
+<ion-card-content>
+  some data here
+</ion-card-content>
+  </ion-card>
 </ion-content>
